@@ -1,0 +1,22 @@
+import telepot
+import json
+
+
+token='720678492:AAEU8hG7M96tqcIOIzBz_YC0lCB5kUgvaFo'
+
+#telepot.api.set_proxy('http://127.0.0.1:8580',
+           #           'https://127.0.0.1:8580' )
+
+chat_id=459575859
+
+
+
+telegramBot=telepot.Bot(token=token)
+
+text=telegramBot.getUpdates(-1)[0]
+
+if (text['message']['text']=='hello'):
+    telegramBot.sendMessage(chat_id,'your hello recieve!!!\n and so thanx')
+
+
+
